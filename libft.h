@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:10 by mmatime           #+#    #+#             */
-/*   Updated: 2017/02/02 14:52:06 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/02/02 14:54:15 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-int				get_next_line(const int fd, **line);
+int				get_next_line(const int fd, char **line);
 
 #endif
