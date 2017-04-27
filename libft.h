@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:10 by mmatime           #+#    #+#             */
-/*   Updated: 2017/02/02 14:54:15 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/04/27 15:25:20 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strjoinfree(char const *s1, char const *s2, char c);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplit_custom(char const *s, char c, char d);
 char			*ft_itoa(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
