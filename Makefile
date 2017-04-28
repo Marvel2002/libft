@@ -6,7 +6,7 @@
 #    By: mmatime <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/19 23:35:21 by mmatime           #+#    #+#              #
-#    Updated: 2017/04/27 17:15:02 by mmatime          ###   ########.fr        #
+#    Updated: 2017/04/28 14:38:44 by mmatime          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ft_strtrim.c ft_strsplit.c \
 ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstrtab.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
-get_next_line.c \
+get_next_line.c ft_strjoinN.c ft_strdupN.c \
 
 OBJ = $(SRC:.c=.o)
 
