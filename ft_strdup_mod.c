@@ -6,13 +6,13 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 18:20:09 by mmatime           #+#    #+#             */
-/*   Updated: 2017/05/24 18:22:09 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/05/24 18:29:37 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup_mod(char *str, int size, char c)
+char	*ft_strdup_mod(const char *s1, int size, char c)
 {
 	int		i;
 	int		a;
@@ -20,18 +20,18 @@ char	*ft_strdup_mod(char *str, int size, char c)
 
 	i = 0;
 	a = 0;
-	while (str[i] && a < size)
+	while (s1[i] && a < size)
 	{
-		if (str[i] == c)
+		if (s1[i] == c)
 			a++;
 		i++;
 	}
 	dst = malloc(sizeof(char *) * (i + 1));
 	a = i;
 	i = 0;
-	while (str[i] && i < a)
+	while (s1[i] && i < a)
 	{
-		dst[i] = str[i];
+		dst[i] = s1[i];
 		i++;
 	}
 	dst[i] = '\0';
