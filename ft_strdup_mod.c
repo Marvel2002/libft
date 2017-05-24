@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strdup_mod.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 17:36:20 by mmatime           #+#    #+#             */
-/*   Updated: 2017/04/28 15:47:37 by mmatime          ###   ########.fr       */
+/*   Created: 2017/05/24 18:20:09 by mmatime           #+#    #+#             */
+/*   Updated: 2017/05/24 18:22:09 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoinN(char const *s1, char const *s2)
+char	*ft_strdup_mod(char *str, int size, char c)
 {
 	int		i;
-	int		j;
 	int		a;
-	char	*str;
+	char	*dst;
 
 	i = 0;
-	j = 0;
 	a = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	while (s1[i])
+	while (str[i] && a < size)
+	{
+		if (str[i] == c)
+			a++;
 		i++;
-	while (s2[j])
-		j++;
-	str = (char *)malloc(sizeof(char) * ((i + j) + 2));
-	if (!str)
-		return (NULL);
+	}
+	dst = malloc(sizeof(char *) * (i + 1));
+	a = i;
 	i = 0;
-	j = 0;
-	while (s1[i])
-		str[a++] = s1[i++];
-	while (s2[j])
-		str[a++] = s2[j++];
-	str[a] = '\n';
-	a++;
-	str[a] = '\0';
-	return (str);
+	while (str[i] && i < a)
+	{
+		dst[i] = str[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
