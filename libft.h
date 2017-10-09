@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:10 by mmatime           #+#    #+#             */
-/*   Updated: 2017/05/30 14:38:52 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/10/09 15:28:37 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void			ft_putchar(char c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
 void			ft_putnbr(int n);
+void			ft_putnbr_c(int n, char c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstrtab(char **str);
 void			ft_putinttab(int **tab, int x, int y);
