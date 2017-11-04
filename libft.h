@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:10 by mmatime           #+#    #+#             */
-/*   Updated: 2017/10/09 15:28:37 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/11/04 19:22:20 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int				ft_strequ(char const *s1, char const *s2);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strjoin_precision(char const *s1, char const *s2, int len);
 char			*ft_strjoin_n(char const *s1, char const *s2);
 char			*ft_strjoinfree(char const *s1, char const *s2, char c);
 char			*ft_strtrim(char const *s);
