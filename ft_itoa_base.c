@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 19:11:49 by mmatime           #+#    #+#             */
+/*   Updated: 2017/11/04 19:12:46 by mmatime          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		nb_len(int value, int base)
 {
 	int i;
-	
+
 	i = 0;
 	if (!value || (value < 0 && base == 10))
 		i = 1;
@@ -17,8 +29,8 @@ int		nb_len(int value, int base)
 
 char	*ft_itoa_base(int value, int base)
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	i = nb_len(value, base);
 	str = malloc((sizeof(char) * i) + 1);
