@@ -6,13 +6,13 @@
 #    By: mmatime <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/19 23:35:21 by mmatime           #+#    #+#              #
-#    Updated: 2017/11/10 14:34:54 by mmatime          ###   ########.fr        #
+#    Updated: 2017/11/14 12:28:56 by mmatime          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra $(INCLUDE)
 RM = rm -f
 
 SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
@@ -33,7 +33,6 @@ get_next_line.c ft_strjoin_n.c ft_strdup_n.c ft_strdup_mod.c ft_epurspace.c \
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
