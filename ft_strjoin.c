@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 17:36:20 by mmatime           #+#    #+#             */
-/*   Updated: 2016/11/19 23:02:04 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/11/14 14:07:25 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	a = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	str = (char *)malloc(sizeof(char) * ((i + j) + 1));
+	if (!s1)
+	{
+		str = ft_strdup(s2);
+		return (str);
+	}
+	str = (char *)malloc(sizeof(char) * ((ft_strlen(i) + ft_strlen(j)) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

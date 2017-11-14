@@ -6,13 +6,13 @@
 #    By: mmatime <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/19 23:35:21 by mmatime           #+#    #+#              #
-#    Updated: 2017/11/14 12:28:56 by mmatime          ###   ########.fr        #
+#    Updated: 2017/11/14 13:59:51 by mmatime          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra $(INCLUDE)
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
 SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
