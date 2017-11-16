@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_minus.c                                    :+:      :+:    :+:   */
+/*   ft_itoa_unsigned.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:28:01 by mmatime           #+#    #+#             */
-/*   Updated: 2017/11/14 15:58:30 by mmatime          ###   ########.fr       */
+/*   Created: 2017/11/16 15:50:30 by mmatime           #+#    #+#             */
+/*   Updated: 2017/11/16 15:55:15 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,22 @@ static char		*ft_backslach(char *src, char *dst, int i, int tmp)
 	return (dst);
 }
 
-char			*ft_itoa_minus(int n, int minus)
+char			*ft_itoa_unsigned(unsigned int n)
 {
 	char	*str;
 	char	buf[12];
 	int		i;
-	int		n_tmp;
+	unsigned int		n_tmp;
 
 	i = 0;
 	n_tmp = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	else if (n == 0)
+	if (n == 0)
 		return (ft_strdup("0"));
-	if (n < 0)
-		n_tmp = -n;
 	while (n_tmp)
 	{
 		buf[i++] = n_tmp % 10 + '0';
 		n_tmp /= 10;
 	}
-	if (n < 0 && minus == 1)
-		buf[i++] = '-';
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	ft_backslach(buf, str, i, n_tmp);
