@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_max.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/19 22:18:49 by mmatime           #+#    #+#             */
-/*   Updated: 2017/11/16 17:22:19 by mmatime          ###   ########.fr       */
+/*   Created: 2017/11/16 18:15:21 by mmatime           #+#    #+#             */
+/*   Updated: 2017/11/16 18:19:06 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_backslach(char *src, char *dst, int i, int tmp)
+static char		*ft_backslach(char *src, char *dst, intmax_t i, intmax_t tmp)
 {
 	while (--i >= 0)
 	{
@@ -23,18 +23,16 @@ static char		*ft_backslach(char *src, char *dst, int i, int tmp)
 	return (dst);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa_max(intmax_t n)
 {
-	char	*str;
-	char	buf[12];
-	int		i;
-	int		n_tmp;
+	char		*str;
+	char		buf[21];
+	intmax_t	i;
+	intmax_t	n_tmp;
 
 	i = 0;
 	n_tmp = n;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	else if (n == 0)
+	if (n == 0)
 		return (ft_strdup("0"));
 	if (n < 0)
 		n_tmp = -n;
