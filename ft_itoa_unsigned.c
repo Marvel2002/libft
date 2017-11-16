@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 15:50:30 by mmatime           #+#    #+#             */
-/*   Updated: 2017/11/16 15:55:15 by mmatime          ###   ########.fr       */
+/*   Updated: 2017/11/16 18:21:35 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ static char		*ft_backslach(char *src, char *dst, int i, int tmp)
 
 char			*ft_itoa_unsigned(unsigned int n)
 {
-	char	*str;
-	char	buf[12];
-	int		i;
-	unsigned int		n_tmp;
+	char			*str;
+	char			buf[12];
+	int				i;
+	unsigned int	n_tmp;
 
 	i = 0;
 	n_tmp = n;
