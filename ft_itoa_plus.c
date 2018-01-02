@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_minus.c                                    :+:      :+:    :+:   */
+/*   ft_itoa_plus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:28:01 by mmatime           #+#    #+#             */
-/*   Updated: 2017/12/27 17:27:05 by mmatime          ###   ########.fr       */
+/*   Created: 2017/11/20 16:47:34 by mmatime           #+#    #+#             */
+/*   Updated: 2017/12/27 17:56:46 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ static char		*ft_backslach(char *src, char *dst,
 	return (dst);
 }
 
-char			*ft_itoa_minus(long long int n, int minus)
+char			*ft_itoa_plus(long long int n, int plus)
 {
-	char				*str;
-	char				buf[21];
-	long long int		i;
-	long long int		n_tmp;
+	char	*str;
+	char	buf[21];
+	int		i;
+	int		n_tmp;
 
 	i = 0;
 	n_tmp = n;
@@ -44,7 +44,7 @@ char			*ft_itoa_minus(long long int n, int minus)
 		buf[i++] = n_tmp % 10 + '0';
 		n_tmp /= 10;
 	}
-	if (n < 0 && minus == 0)
+	if (n < 0 && plus == 1)
 		buf[i++] = '-';
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);

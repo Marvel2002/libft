@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_precision.c                             :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/04 19:13:39 by mmatime           #+#    #+#             */
-/*   Updated: 2017/12/19 14:17:08 by mmatime          ###   ########.fr       */
+/*   Created: 2017/12/30 13:04:24 by mmatime           #+#    #+#             */
+/*   Updated: 2018/01/02 14:18:48 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_precision(char const *s1, char const *s2, int len)
+void		ft_strrev(char *str)
 {
 	int		i;
 	int		j;
-	int		a;
-	char	*str;
+	char	temp;
 
-	i = 0;
 	j = 0;
-	a = 0;
-	if (!s1)
-		s1 = ft_strnew(1);
-	while (s1[i])
-		i++;
-	str = (char *)malloc(sizeof(char) * ((i + len) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-		str[a++] = s1[i++];
-	while (j < len)
-		str[a++] = s2[j++];
-	str[a] = '\0';
-	return (str);
+	i = ft_strlen(str) - 1;
+	while (j < i)
+	{
+		temp = str[j];
+		str[j] = str[i];
+		str[i] = temp;
+		j++;
+		i--;
+	}
 }

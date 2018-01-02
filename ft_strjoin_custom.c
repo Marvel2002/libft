@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_precision.c                             :+:      :+:    :+:   */
+/*   ft_strjoin_custom.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/04 19:13:39 by mmatime           #+#    #+#             */
-/*   Updated: 2017/12/19 14:17:08 by mmatime          ###   ########.fr       */
+/*   Created: 2017/12/30 12:50:54 by mmatime           #+#    #+#             */
+/*   Updated: 2017/12/30 12:57:41 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_precision(char const *s1, char const *s2, int len)
+char		*ft_strjoin_custom(char *s1, char *s2, int nb)
 {
-	int		i;
-	int		j;
-	int		a;
-	char	*str;
+	char	*temp;
+	size_t	len;
+	int		index;
 
-	i = 0;
-	j = 0;
-	a = 0;
-	if (!s1)
-		s1 = ft_strnew(1);
-	while (s1[i])
-		i++;
-	str = (char *)malloc(sizeof(char) * ((i + len) + 1));
-	if (!str)
+	index = 0;
+	len = ft_strlen_plus(s1, nb);
+	if ((temp = (char *)ft_memalloc(sizeof(char) *
+					(len + ft_strlen(s2) + 1))) == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-		str[a++] = s1[i++];
-	while (j < len)
-		str[a++] = s2[j++];
-	str[a] = '\0';
-	return (str);
+	if (s1)
+		ft_memcpy(temp, s1, len);
+	ft_strcpy(temp + len, s2);
+	free((void *)s1);
+	return (temp);
 }

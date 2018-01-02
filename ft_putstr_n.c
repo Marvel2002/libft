@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_precision.c                             :+:      :+:    :+:   */
+/*   ft_putstr_n.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/04 19:13:39 by mmatime           #+#    #+#             */
-/*   Updated: 2017/12/19 14:17:08 by mmatime          ###   ########.fr       */
+/*   Created: 2017/11/22 16:38:10 by mmatime           #+#    #+#             */
+/*   Updated: 2018/01/02 13:17:18 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_precision(char const *s1, char const *s2, int len)
+void	ft_putstr_n(const char *s, int nb)
 {
-	int		i;
-	int		j;
-	int		a;
-	char	*str;
+	int i;
 
 	i = 0;
-	j = 0;
-	a = 0;
-	if (!s1)
-		s1 = ft_strnew(1);
-	while (s1[i])
+	if (!s)
+		return ;
+	while (s[i] == '\0' && nb)
+	{
+		write(1, &s[i], 1);
 		i++;
-	str = (char *)malloc(sizeof(char) * ((i + len) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-		str[a++] = s1[i++];
-	while (j < len)
-		str[a++] = s2[j++];
-	str[a] = '\0';
-	return (str);
+		nb--;
+	}
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+		while (s[i] == '\0' && nb)
+		{
+			write(1, &s[i], 1);
+			i++;
+			nb--;
+		}
+	}
 }
