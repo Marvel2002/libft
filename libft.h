@@ -6,7 +6,7 @@
 /*   By: mmatime <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:10 by mmatime           #+#    #+#             */
-/*   Updated: 2017/12/30 13:10:22 by mmatime          ###   ########.fr       */
+/*   Updated: 2018/02/19 17:49:04 by mmatime          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ char			*ft_itoa_unsigned(unsigned int n);
 char			*ft_itoa_minus(long long int n, int minus);
 char			*ft_itoa_plus(long long int n, int plus);
 char			*ft_itoa_base(int value, int base);
+int				ft_longtoi(const char *str);
 int				nb_len(int value, int base);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);

@@ -6,7 +6,7 @@
 #    By: mmatime <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/19 23:35:21 by mmatime           #+#    #+#              #
-#    Updated: 2017/12/30 13:10:47 by mmatime          ###   ########.fr        #
+#    Updated: 2018/02/19 17:48:33 by mmatime          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_st
 ft_strtrim.c ft_strsplit.c \
 ft_putchar.c ft_putstr.c ft_strlen_plus.c ft_putstr_n.c ft_putendl.c ft_putnbr.c ft_putnbr_c.c ft_putchar_fd.c ft_putstrtab.c ft_putinttab.c ft_strrev.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c ft_itoa_max.c ft_itoa_unsigned.c ft_itoa_umax.c ft_itoa_minus.c ft_itoa_plus.c \
-ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_itoa_base.c \
+ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_itoa_base.c ft_longtoi.c \
 get_next_line.c ft_strjoin_n.c ft_strdup_n.c ft_strdup_mod.c ft_epurspace.c \
 
 OBJ = $(SRC:.c=.o)
